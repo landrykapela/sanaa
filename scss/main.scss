@@ -1,0 +1,198 @@
+$primaryColor: #192537; //#097e86;
+$accentColor: #edb50e; // #f8e808;
+$textColor: black;
+$mainBackgroundColor: white;
+$featureImageSize: 40%;
+$bigText: 4rem;
+$mediumText: 1.5rem;
+$smallText: 0.75rem;
+$logoSize: 120px;
+body {
+  background-color: $mainBackgroundColor;
+  color: $textColor;
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+  font-family: "Montserrat", sans-serif;
+}
+header {
+  //   background-color: $primaryColor;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  //   width: 80%;
+}
+header .logo {
+  width: $logoSize;
+}
+header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 1em;
+}
+header nav .nav-item {
+  color: $primaryColor;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin: 0 0.5em;
+}
+header nav .active {
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: bold;
+  border-bottom: 1px solid $accentColor;
+}
+header nav .nav-item:hover {
+  border-bottom: 1px solid $accentColor;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  //   width: 80%;
+  //   background-color: $accentColor;
+}
+main > article {
+  text-align: center;
+}
+
+article .content {
+  padding: 2em;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.button_outline,
+.button {
+  padding: 0.5em 1em;
+  border-radius: 15px;
+  min-width: 124px;
+  max-width: 200px;
+  cursor: pointer;
+  color: white;
+}
+.button_outline {
+  border: 1px solid white;
+  // color: white;
+}
+.button {
+  background-color: $primaryColor;
+  // color: white;
+}
+.button:hover,
+.button_outline:hover {
+  background-color: $accentColor;
+  color: $textColor;
+  border: none;
+}
+a:link,
+a:visited {
+  text-decoration: none;
+  color: $primaryColor;
+}
+a:hover {
+  text-decoration: none;
+  color: $accentColor;
+}
+.bg-primary {
+  background-color: $primaryColor;
+  color: $mainBackgroundColor;
+}
+.bg-accent {
+  background-color: $accentColor;
+  color: $textColor;
+}
+.text-primary {
+  color: $primaryColor;
+}
+.text-accent {
+  color: $accentColor;
+}
+.feature-image {
+  width: $featureImageSize;
+}
+
+.big-text {
+  font-size: $bigText;
+}
+.medium-text {
+  font-size: $mediumText;
+}
+.text-line-large {
+  // text-decoration: underline;
+  padding: 0.2em 0;
+  color: $accentColor;
+  border-bottom: 3px solid $primaryColor;
+}
+footer {
+  padding: 1em;
+  font-size: $smallText;
+  //   width: calc(100% - 2em);
+  background-color: $primaryColor;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+footer article {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+footer a:link,
+footer a:visited {
+  text-decoration: none;
+  color: white;
+  line-height: 2em;
+}
+footer a:hover {
+  text-decoration: none;
+  color: $accentColor;
+}
+footer h5 {
+  border-bottom: 1px solid $accentColor;
+  padding-bottom: 0.5em;
+}
+.cookie_popup {
+  position: fixed;
+  width: calc(100% - 2em);
+  height: 100px;
+  text-align: center;
+  top: 0;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  animation: fadeIn 0.5s ease-in 5s;
+}
+.hidden {
+  display: none;
+}
+.fadeOut {
+  animation: fadeOut 5s ease-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
