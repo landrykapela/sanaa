@@ -3,7 +3,7 @@ $accentColor: #edb50e; // #f8e808;
 $textColor: black;
 $mainBackgroundColor: white;
 $featureImageSize: 40%;
-$bigText: 4rem;
+$bigText: 3rem;
 $mediumText: 1.5rem;
 $smallText: 0.75rem;
 $logoSize: 120px;
@@ -51,7 +51,7 @@ header nav .nav-item:hover {
   text-transform: uppercase;
   cursor: pointer;
 }
-main {
+.container {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -72,20 +72,37 @@ article .content {
   align-items: center;
   width: calc(100% - 4em);
 }
-form {
+.left-pane,
+.right-pane {
+  width: 50%;
   position: absolute;
   top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: -100000;
+}
+.left-pane {
   left: 0;
+  background-color: $mainBackgroundColor;
+}
+.right-pane {
+  right: 0;
+  background-color: $accentColor;
+}
+form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  background-color: $accentColor;
-  width: calc(40% - 4em);
+  width: calc(60% - 4em);
   padding: 2em;
 }
 form input[type="email"],
-form input[type="password"] {
+form input[type="password"],
+form input[type="text"] {
   padding: 0.5em 1em;
   // width: calc(60% - 2em);
 }
@@ -112,6 +129,7 @@ form .form-group {
   max-width: 200px;
   cursor: pointer;
   color: white;
+  text-align: center;
 }
 .button_outline {
   border: 1px solid white;
@@ -216,6 +234,16 @@ footer h5 {
 .fadeOut {
   animation: fadeOut 5s ease-out;
 }
+
+.fadeIn {
+  animation: fadeIn 5s ease-in;
+}
+.fallin {
+  animation: fallin 0.3s linear 3s;
+}
+.riseup {
+  animation: riseup 0.3s linear 4s;
+}
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -230,5 +258,25 @@ footer h5 {
   }
   to {
     opacity: 0;
+  }
+}
+@keyframes fallin {
+  from {
+    margin-right: -300px;
+    // opacity: 0;
+  }
+  to {
+    margin-right: 0;
+    // opacity: 1;
+  }
+}
+@keyframes riseup {
+  from {
+    margin-right: 200px;
+    opacity: 0;
+  }
+  to {
+    margin-right: 0;
+    opacity: 1;
   }
 }

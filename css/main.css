@@ -46,7 +46,7 @@ header nav .nav-item:hover {
   cursor: pointer;
 }
 
-main {
+.container {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -67,21 +67,41 @@ article .content {
   width: calc(100% - 4em);
 }
 
-form {
+.left-pane,
+.right-pane {
+  width: 50%;
   position: absolute;
   top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: -100000;
+}
+
+.left-pane {
   left: 0;
+  background-color: white;
+}
+
+.right-pane {
+  right: 0;
+  background-color: #edb50e;
+}
+
+form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  background-color: #edb50e;
-  width: calc(40% - 4em);
+  width: calc(60% - 4em);
   padding: 2em;
 }
 
 form input[type=email],
-form input[type=password] {
+form input[type=password],
+form input[type=text] {
   padding: 0.5em 1em;
 }
 
@@ -111,6 +131,7 @@ form .form-group {
   max-width: 200px;
   cursor: pointer;
   color: white;
+  text-align: center;
 }
 
 .button_outline {
@@ -162,7 +183,7 @@ a:hover {
 }
 
 .big-text {
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 .medium-text {
@@ -232,6 +253,18 @@ footer h5 {
   animation: fadeOut 5s ease-out;
 }
 
+.fadeIn {
+  animation: fadeIn 5s ease-in;
+}
+
+.fallin {
+  animation: fallin 0.3s linear 3s;
+}
+
+.riseup {
+  animation: riseup 0.3s linear 4s;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -246,6 +279,24 @@ footer h5 {
   }
   to {
     opacity: 0;
+  }
+}
+@keyframes fallin {
+  from {
+    margin-right: -300px;
+  }
+  to {
+    margin-right: 0;
+  }
+}
+@keyframes riseup {
+  from {
+    margin-right: 200px;
+    opacity: 0;
+  }
+  to {
+    margin-right: 0;
+    opacity: 1;
   }
 }
 
