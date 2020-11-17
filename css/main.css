@@ -48,11 +48,13 @@ header nav .nav-item:hover {
 
 .container {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   height: auto;
   padding-top: 4em;
+  max-width: 90%;
 }
 
 main > article {
@@ -127,7 +129,7 @@ form .form-group {
 .button {
   padding: 0.5em 1em;
   border-radius: 15px;
-  min-width: 124px;
+  min-width: 120px;
   max-width: 200px;
   cursor: pointer;
   color: white;
@@ -194,6 +196,41 @@ a:hover {
   padding: 0.2em 0;
   color: #edb50e;
   border-bottom: 3px solid #192537;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  margin: 1em 0.5em;
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card:hover .card-head {
+  transform: rotateY(360deg);
+}
+
+.card .card-head {
+  background-size: cover;
+  display: block;
+  height: 300px;
+  width: 300px;
+}
+
+.card:hover .card-data {
+  animation: falldown 0.3s linear;
+  display: flex;
+}
+
+.card .card-data {
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1em 0.5em;
 }
 
 footer {
@@ -265,6 +302,14 @@ footer h5 {
   animation: riseup 0.3s linear 4s;
 }
 
+@keyframes falldown {
+  from {
+    margin-top: -300px;
+  }
+  to {
+    margin-top: 0;
+  }
+}
 @keyframes fadeIn {
   from {
     opacity: 0;
