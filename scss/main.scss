@@ -1,0 +1,320 @@
+$primaryColor: #192537; //#097e86;
+$accentColor: #edb50e; // #f8e808;
+$textColor: black;
+$mainBackgroundColor: white;
+$featureImageSize: 40%;
+$bigText: 3rem;
+$mediumText: 1.5rem;
+$smallText: 0.75rem;
+$logoSize: 120px;
+
+body {
+  background-color: $mainBackgroundColor;
+  color: $textColor;
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+  font-family: "Montserrat", sans-serif;
+}
+header {
+  //   background-color: $primaryColor;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  //   width: 80%;
+}
+header .logo {
+  width: $logoSize;
+}
+header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 1em;
+}
+header nav .nav-item {
+  color: $primaryColor;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin: 0 0.5em;
+}
+header nav .active {
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: bold;
+  border-bottom: 1px solid $accentColor;
+}
+header nav .nav-item:hover {
+  border-bottom: 1px solid $accentColor;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  padding-top: 4em;
+  max-width: 90%;
+  //   background-color: $accentColor;
+}
+main > article {
+  text-align: center;
+}
+
+article .content {
+  padding: 2em;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: calc(100% - 4em);
+}
+.left-pane,
+.right-pane {
+  width: 50%;
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: -100000;
+}
+.left-pane {
+  left: 0;
+  background-color: $mainBackgroundColor;
+}
+.right-pane {
+  right: 0;
+  background-color: $accentColor;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: calc(60% - 4em);
+  padding: 2em;
+}
+form input[type="email"],
+form input[type="password"],
+form input[type="text"] {
+  padding: 0.5em 1em;
+  // width: calc(60% - 2em);
+}
+form label {
+  padding: 1em 0 0 0;
+}
+form .form-control {
+  margin: 1em 0;
+  width: calc(100% - 2em);
+}
+form .form-group {
+  padding: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100% - 2em);
+}
+.button_outline,
+.button {
+  padding: 0.5em 1em;
+  border-radius: 15px;
+  min-width: 120px;
+  max-width: 200px;
+  cursor: pointer;
+  color: white;
+  text-align: center;
+}
+.button_outline {
+  border: 1px solid white;
+  // color: white;
+}
+.button {
+  background-color: $primaryColor;
+  // color: white;
+}
+.button:hover,
+.button_outline:hover {
+  background-color: $accentColor;
+  color: $textColor;
+  border: none;
+}
+a:link,
+a:visited {
+  text-decoration: none;
+  color: $primaryColor;
+}
+a:hover {
+  text-decoration: none;
+  color: $accentColor;
+}
+.bg-primary {
+  background-color: $primaryColor;
+  color: $mainBackgroundColor;
+}
+.bg-accent {
+  background-color: $accentColor;
+  color: $textColor;
+}
+.text-primary {
+  color: $primaryColor;
+}
+.text-accent {
+  color: $accentColor;
+}
+.feature-image {
+  width: $featureImageSize;
+}
+
+.big-text {
+  font-size: $bigText;
+}
+.medium-text {
+  font-size: $mediumText;
+}
+.text-line-large {
+  // text-decoration: underline;
+  padding: 0.2em 0;
+  color: $accentColor;
+  border-bottom: 3px solid $primaryColor;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  margin: 1em 0.5em;
+  cursor: pointer;
+}
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.card:hover .card-head {
+  transform: rotateY(360deg);
+}
+.card .card-head {
+  background-size: cover;
+  display: block;
+  height: 300px;
+  width: 300px;
+}
+.card:hover .card-data {
+  animation: falldown 0.3s linear;
+  display: flex;
+}
+.card .card-data {
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1em 0.5em;
+}
+footer {
+  padding: 1em;
+  font-size: $smallText;
+  //   width: calc(100% - 2em);
+  background-color: $primaryColor;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+footer article {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+footer a:link,
+footer a:visited {
+  text-decoration: none;
+  color: white;
+  line-height: 2em;
+}
+footer a:hover {
+  text-decoration: none;
+  color: $accentColor;
+}
+footer h5 {
+  border-bottom: 1px solid $accentColor;
+  padding-bottom: 0.5em;
+}
+.cookie_popup {
+  position: fixed;
+  width: calc(100% - 2em);
+  height: 100px;
+  text-align: center;
+  top: 0;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  animation: fadeIn 0.5s ease-in 5s;
+}
+.hidden {
+  display: none;
+}
+.fadeOut {
+  animation: fadeOut 5s ease-out;
+}
+
+.fadeIn {
+  animation: fadeIn 5s ease-in;
+}
+.fallin {
+  animation: fallin 0.3s linear 3s;
+}
+.riseup {
+  animation: riseup 0.3s linear 4s;
+}
+@keyframes falldown {
+  from {
+    margin-top: -300px;
+  }
+  to {
+    margin-top: 0;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fallin {
+  from {
+    margin-right: -300px;
+    // opacity: 0;
+  }
+  to {
+    margin-right: 0;
+    // opacity: 1;
+  }
+}
+@keyframes riseup {
+  from {
+    margin-right: 200px;
+    opacity: 0;
+  }
+  to {
+    margin-right: 0;
+    opacity: 1;
+  }
+}
