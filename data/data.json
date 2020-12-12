@@ -1,0 +1,82 @@
+{
+  "arts": [
+    {
+      "id": 0,
+      "name": "Savanah Zebra",
+      "size": "86cm * 54cm",
+      "category": "Painting",
+      "theme": "Nature",
+      "image": ["zebra.jpg", "zebra1.jpg"],
+      "price": "$1400",
+      "loves": 11,
+      "artist": "Jean-Marc Babale",
+      "description": "Black and White Oil paint canvas",
+      "date": "Jan 12 1998"
+    },
+    {
+      "id": 1,
+      "name": "Zimbabwean Model",
+      "size": "86cm * 54cm",
+      "category": "Photograph",
+      "theme": "People",
+      "image": ["model.jpg"],
+      "price": "$2640",
+      "loves": 30,
+      "artist": "Fernandez Aguero",
+      "description": "Photograph of a traditionally painted Zimbabwean model",
+      "date": "Sep 14 2001"
+    },
+    {
+      "id": 2,
+      "name": "Brown Sugar",
+      "size": "86cm * 54cm",
+      "category": "Photograph",
+      "theme": "Nude",
+      "image": ["sexy.jpg"],
+      "price": "$5100",
+      "loves": 28,
+      "artist": "Fernandez Aguero",
+      "description": "Photograph of a pure brown skinned African beauty",
+      "date": "Mar 25 2000"
+    },
+    {
+      "id": 3,
+      "name": "Black Beauty",
+      "size": "102cm * 75cm",
+      "category": "Painting",
+      "theme": "Nude",
+      "image": ["nude.jpg", "sexy1.jpg", "sexy2.jpg"],
+      "price": "$4700",
+      "loves": 57,
+      "artist": "Vusi Dumisani",
+      "description": "Sexy black beauty painted with oil paint on canvas",
+      "date": "Mar 18 2004"
+    },
+    {
+      "id": 4,
+      "name": "Sunset at Usa River",
+      "size": "36cm * 74cm",
+      "category": "Painting",
+      "theme": "Nature",
+      "image": ["sunset.jpg"],
+      "price": "$700",
+      "loves": 9,
+      "artist": "Halid Mvungi",
+      "description": "A water color painting of the sunset at Bagamoyo beach",
+      "date": "Oct 15 2010"
+    },
+    {
+      "id": 5,
+      "name": "Tanzanian Maasai",
+      "size": "100cm * 68cm",
+      "category": "Painting",
+      "theme": "People",
+      "image": ["maasai.jpg"],
+      "price": "$1200",
+      "loves": 13,
+      "artist": "Alfonsi Mbugi",
+      "description": "A painting of a morani of the Northern Tanzanian village",
+      "date": "Jun 12 2020"
+    }
+  ]
+}

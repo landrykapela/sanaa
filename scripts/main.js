@@ -3,11 +3,12 @@ const btnDismissNotification = document.querySelector(
 );
 
 const cookieNotification = document.querySelector("#cookie_notification");
-btnDismissNotification.addEventListener("click", () => {
-  cookieNotification.classList.add("hidden");
-  setCookie("accept", "1", 86400);
-});
-
+if (cookieNotification) {
+  btnDismissNotification.addEventListener("click", () => {
+    cookieNotification.classList.add("hidden");
+    setCookie("accept", "1", 86400);
+  });
+}
 const setCookie = (name, value, life) => {
   console.log("setting cookie...: ", name);
   let cookie = name + "=" + encodeURIComponent(value);
