@@ -22,28 +22,47 @@
       /></a>
       <nav>
         <a href="index.html" class="nav-item">Home</a>
-        <a href="" class="nav-item active">Gallery</a>
+        <a href="gallery.html" class="nav-item">Gallery</a>
         <a href="" class="nav-item">Artists</a>
-        <a href="contacts.html" class="nav-item">Contacts</a>
+        <a href="" class="nav-item">Contacts</a>
       </nav>
     </header>
-    <!-- <form>
-      <input
-        type="text"
-        name="search"
-        id="search"
-        class="form-control"
-        placeholder="search name, category, theme"
-      />
-    </form> -->
-    <main class="container" id="container">
-      <div class="lds-hourglass" id="spinner"></div>
+    <main>
+      <section class="contact-form">
+        <form>
+          <label for="email">E-mail</label>
+          <input
+            type="email"
+            class="form-control"
+            name="email"
+            id="email"
+            placeholder="E-mail..."
+          />
+          <label for="email">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            name="password"
+            id="password"
+            placeholder="Password..."
+          />
+          <div class="form-group">
+            <input
+              type="submit"
+              name="btnLogin"
+              id="btnLogin"
+              class="button"
+              value="Login"
+            />
+            <a class="" href="signup.html">Signup</a>
+          </div>
+        </form>
+      </section>
     </main>
-    <div id="overlay"></div>
     <footer>
       <article>
         <h5>Quick Links</h5>
-        <a href="index.html">Home</a>
+        <a href="">Home</a>
         <a href="">Gallery</a>
         <a href="">Artists</a>
         <a href="">Contacts</a>
@@ -63,6 +82,5 @@
       </article>
     </footer>
     <script src="scripts/main.js"></script>
-    <script src="scripts/gallery.js"></script>
   </body>
 </html>
